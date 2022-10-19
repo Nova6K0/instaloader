@@ -25,16 +25,27 @@ To **download all pictures and videos of a profile**, as well as the
 
 ::
 
-    instaloader profile [profile ...]
+    instaloader profile1 profile2 ...
 
-where ``profile`` is the name of a profile you want to download. Instead
-of only one profile, you may also specify a list of profiles.
+where ``profile`` is the name of a profile or profiles you want to download.
+The names of each profile must be put, followed, with a space between them,
+as the example shows.
+
+*Note: This change in documentation is made to clarify that the list should not
+go in square brackets. And that it is only a mere indication that this list is
+going to iterate. The above is only referring to a list of profiles. In the case
+of other arguments, it will be necessary to put parentheses, brackets,... as
+specified in each explanation. All this, whenever we use either the stand-alone (exe)
+version or the "Instaloader.py" module. Not valid to create a source code, unless said
+code directly calls the application. For example, if you use a created code and make a
+call to the main module or the executable file. As when used in a lot by lot, which calls
+the system symbol (CMD, Bash ...).*
 
 To later **update your local copy** of that profiles, you may run
 
 ::
 
-    instaloader --fast-update profile [profile ...]
+    instaloader --fast-update profile1 profile2 ...
 
 If :option:`--fast-update` is given, Instaloader stops when arriving at the
 first already-downloaded picture.
@@ -44,7 +55,7 @@ the time each profile was last downloaded and only download newer media:
 
 ::
 
-    instaloader --latest-stamps -- profile [profile ...]
+    instaloader --latest-stamps -- profile1 profile2 ...
 
 With this option it's possible to move or delete downloaded media and still keep
 the archive updated.
@@ -58,7 +69,7 @@ invoke it with
 
 ::
 
-    instaloader --login=your_username profile [profile ...]
+    instaloader --login=your_username profile1 profile2...
 
 When logging in, Instaloader **stores the session cookies** in a file in your
 home directory, which will be reused later the next time :option:`--login`
@@ -329,7 +340,7 @@ Instaloader logged-in, create a session file::
 Then use the same username in your cronjob to load the session and download
 the given targets::
 
-   instaloader --login=your_username --quiet target [...]
+   instaloader --login=your_username --quiet target ...
 
 Instaloader saves the session file to
 ``~/.config/instaloader/session-YOUR-USERNAME``. See
