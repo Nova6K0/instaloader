@@ -37,7 +37,7 @@
 
     $ pip3 install instaloader
 
-    $ instaloader profile [profile ...]
+    $ instaloader profile1 profile2 ...
 
 **Instaloader**
 
@@ -72,7 +72,7 @@ To **download all pictures and videos of a profile**, as well as the
 
 ::
 
-    instaloader profile [profile ...]
+    instaloader profile1 profile2 ...
 
 where ``profile`` is the name of a profile you want to download. Instead
 of only one profile, you may also specify a list of profiles.
@@ -81,7 +81,7 @@ To later **update your local copy** of that profiles, you may run
 
 ::
 
-    instaloader --fast-update profile [profile ...]
+    instaloader --fast-update profile1 profile2 ...
 
 If ``--fast-update`` is given, Instaloader stops when arriving at the
 first already-downloaded picture.
@@ -91,7 +91,7 @@ the time each profile was last downloaded and only download newer media:
 
 ::
 
-    instaloader --latest-stamps -- profile [profile ...]
+    instaloader --latest-stamps -- profile1 profile2 ...
 
 With this option it's possible to move or delete downloaded media and still keep
 the archive updated.
@@ -105,7 +105,7 @@ invoke it with
 
 ::
 
-    instaloader --login=your_username profile [profile ...]
+    instaloader --login=your_username profile1 profile2 ...
 
 When logging in, Instaloader **stores the session cookies** in a file in your
 temporary directory, which will be reused later the next time ``--login``
